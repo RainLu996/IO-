@@ -11,7 +11,9 @@ public class FileReaderTest {
         try {
             reader = new FileReader("常用流\\src\\com\\lujun61\\javase\\io\\input\\FileInputStreamTest02.java");
 
-           //FileReader中，需要创建一个char数组来读取文档内容
+            /** FileReader中，需要创建一个char数组来读取文档内容
+             * 字符流
+             */
             char[] c = new char[100];
 
             int readCount= 0;

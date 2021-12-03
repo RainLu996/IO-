@@ -8,10 +8,14 @@ public class FileOutputStreamTest01 {
     public static void main(String[] args) {
         FileOutputStream out = null;
         try {
-            //先清空文档，再写入数据
-            //out = new FileOutputStream("outputTest");
+            /**
+             * append参数比较
+             */
+            /* 1、先清空文档，再写入数据
+            out = new FileOutputStream("outputTest");
+            */
 
-            //直接在文档末尾追加数据
+            /* 2、直接在文档末尾追加数据 */
             out = new FileOutputStream("outputTest", true);
 
             byte[] bytes = {97, 98, 99};

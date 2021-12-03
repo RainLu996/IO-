@@ -17,6 +17,7 @@ public class BufferedWriterTest02 {
             buff.write("\n");
             buff.write("Hello, World!");
 
+
             buff.flush();
         } catch (FileNotFoundException e) {
             e.printStackTrace();

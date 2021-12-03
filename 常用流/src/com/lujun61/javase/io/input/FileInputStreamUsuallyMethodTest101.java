@@ -17,7 +17,7 @@ public class FileInputStreamUsuallyMethodTest101 {
 
             byte[] bytes_All = new byte[file.available()];
 
-            file.skip(2);//跳过几个字节不读
+            file.skip(0);//跳过几个字节不读
 
             int readCount = file.read(bytes_All);
             System.out.println(readCount);
@@ -27,6 +27,14 @@ public class FileInputStreamUsuallyMethodTest101 {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if(file != null){
+                try {
+                    file.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

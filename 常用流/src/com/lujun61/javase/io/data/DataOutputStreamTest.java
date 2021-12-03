@@ -7,8 +7,8 @@ import java.io.IOException;
 
 /*
     数据专属的流：
-        这个流可以将数据连同数据类型一并写入文件
-        tip：此文件不是普通文本文件（无法用记事本打开/打开也是一堆乱码）
+        这个流可以将数据连同【数据类型】一并写入文件
+        tip：此文件【不是普通文本文件】（无法用记事本打开/打开也是一堆乱码）
  */
 public class DataOutputStreamTest {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class DataOutputStreamTest {
 
         try {
             //构造方法中的类型为：OutputStream；但是OutputStream是接口，无法new对象，所以使用它的子类
-            data = new DataOutputStream(new FileOutputStream("常用流\\src\\com\\lujun61\\javase\\io\\data\\test", true));
+            data = new DataOutputStream(new FileOutputStream("常用流\\src\\com\\lujun61\\javase\\io\\data\\test.txt"));
 
             //准备不同数据类型的数据：数据流将会把数据类型一同写入~
             byte b = 1;

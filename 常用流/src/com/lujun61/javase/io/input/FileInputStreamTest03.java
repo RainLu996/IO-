@@ -16,7 +16,7 @@ public class FileInputStreamTest03 {
             in = new FileInputStream("常用流\\src\\com\\lujun61\\javase\\io\\input\\FileInputStreamTest02.java");
 
             //拷贝被读取文件
-            out = new FileOutputStream("常用流\\src\\com\\lujun61\\javase\\io\\input\\test.txt");
+            out = new FileOutputStream("常用流\\src\\com\\lujun61\\javase\\io\\input\\test.txt", true);
 
             //核心步骤：一边读，一边写
             byte[] bytes = new byte[1024 * 1024];//容量为1MB的数组

@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 
-/* IO与Properties集合的联合使用 */
+                                    /* IO与Properties集合的联合使用 */
 
 /*
     IO与Properties联合使用是一个非常好的设计理念：

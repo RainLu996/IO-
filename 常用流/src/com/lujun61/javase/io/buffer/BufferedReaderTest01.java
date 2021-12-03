@@ -16,7 +16,7 @@ public class BufferedReaderTest01 {
         try {
             //当一个流的构造方法中需要另一个流时，这个被传进来的流称为：‘节点流’——————>（不需要自己关闭，底层已经关闭）
             //最外部的流叫做：‘包装流’/‘处理流’——————>需要自己关闭(close)
-            buff = new BufferedReader(new FileReader("常用流\\src\\com\\lujun61\\javase\\io\\writer\\test.txt"));
+            buff = new BufferedReader(new FileReader("常用流\\src\\com\\lujun61\\javase\\io\\buffer\\test.txt"));
 
             String s = null;
             while ((s = buff.readLine()) != null)  {//读取一行，且不会读取换行符：更加方便，但并没有快多少

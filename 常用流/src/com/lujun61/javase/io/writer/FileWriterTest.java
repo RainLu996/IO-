@@ -8,7 +8,7 @@ public class FileWriterTest {
         FileWriter writer = null;
 
         try {
-            writer = new FileWriter("常用流\\src\\com\\lujun61\\javase\\io\\writer\\test.txt", true);
+            writer = new FileWriter("D:\\JavaSourceFile\\IO流\\常用流\\src\\com\\lujun61\\javase\\io\\writer\\writer.txt");
 
             char[] c = {'H', 'H', 'H'};
             writer.write(c);
@@ -18,7 +18,7 @@ public class FileWriterTest {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (writer == null) {
+            if (writer != null) {
                 try {
                     writer.close();
                 } catch (IOException e) {

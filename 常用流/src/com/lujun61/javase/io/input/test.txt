@@ -3,12 +3,14 @@ package com.lujun61.javase.io.input;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 
 /* read(byte[] b);方法——————>返回读取到的字节数量，而不是字节本身 */
 /* 未读取到数据（数据读取完毕）则返回“-1” */
 public class FileInputStreamTest02 {
     public static void main(String[] args) {
-        FileInputStream file = null;
+        //FileInputStream file = null;
+        InputStream file = null;
 
         try {
             file = new FileInputStream("temp");
@@ -22,7 +24,10 @@ public class FileInputStreamTest02 {
                 System.out.print(new String(bytes, 0, readCount));
             }
 
-            System.out.println(readCount);
+            /**
+             * 文件中的内容已经读取完毕；再读取文件就是-1
+             */
+            System.out.println("\n" + readCount);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
